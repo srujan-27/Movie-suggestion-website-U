@@ -7,7 +7,7 @@ session_start();
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
-		//something was posted
+		
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
 
@@ -39,6 +39,9 @@ session_start();
 
 	<style type="text/css">
 	
+	body{
+        background-color:brown ;
+	}
 	#text{
 
 		height: 25px;
@@ -46,6 +49,7 @@ session_start();
 		padding: 4px;
 		border: solid thin #aaa;
 		width: 100%;
+		font-family: "Poppins", sans-serif;
 	}
 
 	#button{
@@ -53,16 +57,20 @@ session_start();
 		padding: 10px;
 		width: 100px;
 		color: white;
-		background-color: lightblue;
+		font-size: 20px;
+		background-color: rgb(255, 0, 0);
 		border: none;
+		border-radius: 5px;
 	}
 
 	#box{
 
-		background-color: grey;
+		background-color: #111111;
 		margin: auto;
 		width: 300px;
 		padding: 20px;
+		border-radius: 10px;
+		
 	}
 
 	</style>
@@ -72,8 +80,8 @@ session_start();
 		<form method="post">
 			<div style="font-size: 20px;margin: 10px;color: white;">Signup</div>
 
-			<input id="text" type="text" name="user_name"><br><br>
-			<input id="text" type="password" name="password"><br><br>
+			<input id="text" type="text" name="user_name" placeholder="USERNAME"><br><br>
+			<input id="text" type="password" name="password" placeholder="PASSWORD"><br><br>
 
 			<input id="button" type="submit" value="Signup"><br><br>
 

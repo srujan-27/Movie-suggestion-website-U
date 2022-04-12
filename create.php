@@ -13,7 +13,7 @@ if(mysqli_query($link,$sql))
 }
 else
 {
-     echo"ERROR ".mysqli_error($sql);
+     echo"ERROR ";
 }
 mysqli_close($link)
 ?>

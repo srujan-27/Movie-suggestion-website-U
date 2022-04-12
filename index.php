@@ -1,5 +1,5 @@
 <?php 
-session_start();
+  session_start();
 
 	include("connection.php");
 	include("functions.php");
@@ -17,29 +17,50 @@ session_start();
   </head>
   <body>
     <header>
+    
       <form id="form">
         <input type="text" placeholder="Search" id="search" class="search" />
       </form>
       <form action="login.php" method="get" target="_blank" >
         <button type="submit" id="signup">signup/login</button>
+      </form>
       <form action="logout.php" method="get" target="_blank" >
         <button type="submit" id="signup">logout</button>
-        <h1 style="color:red;">hello
-        <?php
-        echo $user_data['user_name'];
-        
-        
-        
-        ?>
-        
-        
-        </h1>
+      </form>
+     
       
     
     </header>
 
-    <div id="tags"></div>
+    
+      <div id="tags">
+      
+    
+      </div>
+     <div id="yes">
+       
+       <form action="WL.php" method="get" target="_blank" >
+        <button type="submit" id="watchlater">◤Watch-Later◢</button>
+       </form>
+       
+     <h2 id="name" style="color:white;">
 
+       
+       <?php
+     
+       if(isset($user_data['user_name'])){
+         echo "Welcome {$user_data['user_name']}";
+       }
+       
+       
+       
+       ?>
+       
+       
+       </h2> 
+     </div>
+    
+    
     <main id="main"></main>
 
     <script src="script.js"></script>
